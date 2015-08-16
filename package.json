@@ -1,6 +1,6 @@
 {
   "name": "nodemailer-signature",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "nodemailer plugin to add signature",
   "main": "lib/main.js",
   "scripts": {
