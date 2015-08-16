@@ -1,3 +1,5 @@
+fs = require 'fs'
+
 signature = (options) ->
   signatureManager = new SignatureManager options
   (options, done) ->
