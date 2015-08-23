@@ -17,6 +17,8 @@ class SignatureManager
         @signatureFile = @signature
         @signature = null
 
+      @separator = "\n--\n"
+
     @applyTo ?=
       markdown: (text, signature) ->
         text + @separator + signature
