@@ -20,13 +20,13 @@ class SignatureManager
       @separator = "\n--\n"
 
     @applyTo ?=
-      markdown: (text, signature) ->
+      markdown: (text, signature) =>
         text + @separator + signature
 
-      html: (text, signature) ->
+      html: (text, signature) =>
         text + @separator + signature
 
-      text: (text, signature) ->
+      text: (text, signature) =>
         text + @separator + signature
 
   compile: (mail, done) ->
