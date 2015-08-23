@@ -27,7 +27,8 @@ class SignatureManager
       text: (text, signature) ->
         text + @separator + signature
 
-  compile: (options, done) ->
+  compile: (mail, done) ->
+    options = mail.data
     if options.signature
       signature = options.signature
 
@@ -50,6 +51,8 @@ class SignatureManager
     else
       for key, value of @applyTo
         continue if key not of options
-        options[key] = @applyTo options[key], signature
+        options[key] = @applyTo[key] options[key], signature
+
+    done()
 
 module.exports = {signature, SignatureManager}
